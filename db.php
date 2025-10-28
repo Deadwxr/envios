@@ -1,6 +1,6 @@
 <?php
 $host = 'mysql-juanda.alwaysdata.net';
-$user = 'juanda.alwaysdata.net';
+$user = 'juanda';
 $password = 'misifu123';
 $database = 'juanda_envios';
 
