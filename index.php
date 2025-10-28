@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Gestión de Envíos a todo el pais</h1>
+    <h1>Gestión de Envíos a todo el pais.</h1>
     <a href="create.php">Crear Envío</a>
     <table border="1">
         <thead>
