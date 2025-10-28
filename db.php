@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'sistema_envios';
+$host = 'mysql-juanda.alwaysdata.net';
+$user = 'juanda.alwaysdata.net';
+$password = 'misifu123';
+$database = 'juanda_envios';
 
 $conn = mysqli_connect($host, $user, $password, $database);
 
