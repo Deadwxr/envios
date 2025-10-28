@@ -1,43 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Envíos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Gestión de Envíos</h1>
-    <a href="create.php">Crear Envío</a>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Destinatario</th>
-                <th>Dirección</th>
-                <th>Descripción</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            include 'db.php';
-            $query = "SELECT * FROM envios";
-            $result = mysqli_query($conn, $query);
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>
-                        <td>{$row['id']}</td>
-                        <td>{$row['destinatario']}</td>
-                        <td>{$row['direccion']}</td>
-                        <td>{$row['descripcion']}</td>
-                        <td>
-                            <a href='edit.php?id={$row['id']}'>Editar</a>
-                            <a href='delete.php?id={$row['id']}'>Eliminar</a>
-                        </td>
-                    </tr>";
-            }
-            ?>
-        </tbody>
-    </table>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a[href*="edit"] {
+    color: #ffc107;
+}
+
+a[href*="delete"] {
+    color: #dc3545;
+}
+
+a[href*="delete"]:hover {
+    color: #a71d2a;
+}
